@@ -1,9 +1,8 @@
 # C
 Training C language.
 
-#######################################
-      How to start to program in C
-#######################################
+How to start to program in C:
+
 1. Install GCC:
   # apt-get install gcc
 
