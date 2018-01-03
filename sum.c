@@ -2,9 +2,7 @@
 
 int main(void) {
 
-	float value1;
-	float value2;
-	float value3;
+	float value1,value2,value3;
 	char oper;
 
 	printf("Digite um valor: ");
