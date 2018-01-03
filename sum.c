@@ -2,15 +2,35 @@
 
 int main(void) {
 
-	int value1;
-	int value2;
-	int value3;
+	float value1;
+	float value2;
+	float value3;
+	char oper;
 
-	value1 = 50;
-	value2 = 50;
-	value3 = value1 + value2;
+	printf("Digite um valor: ");
+	scanf("%f", &value1);
 
-	printf("A soma de %i e %i é igual a %i\n", value1, value2, value3);
+	printf("Digite um operador: ");
+	scanf(" %c", &oper);
+
+	printf("Digite um segundo valor: ");
+	scanf("%f", &value2);
+	
+	switch( oper )
+	{
+		case '+':
+			printf("%.1f\n", value1 + value2);
+			break;
+		case '-':
+			printf("%.1f", value1 - value2);
+			break;
+		case '*':
+			printf("%.1f", value1 * value2);
+			break;
+		case '/':
+			printf("%.1f", value1 / value2);
+			break;
+	}
 
 	return 0;
 
