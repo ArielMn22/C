@@ -1,17 +1,59 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+float calculating() {	
+	
+		char batata[30];
+		float num1 = 0;
+		float num2 = 0;
+		char op;
+		
+		printf("> ");
+		scanf("%[^\n]s", batata);
+		setbuf(stdin, NULL);
+		//printf("Esse é o valor de 'batata': %s\n", batata);
+
+		sscanf(batata, "%f %c %f" , &num1, &op, &num2);
+
+		//printf("Esse é o valor de 'num1': %.2f\n", num1);
+		//printf("Esse é o valor de 'op': %c\n", op);
+		//printf("Esse é o valor de 'num2': %.2f\n", num2);
+
+		switch( op )
+		{
+			case '+':
+				printf("%.2f\n" , num1 + num2);
+				break;
+			case '-':
+				printf("%.2f\n", num1 - num2);
+				break;
+			case '*':
+				printf("%.2f\n", num1 * num2);
+				break;
+			case '/':
+				printf("%.2f\n", num1 / num2);	
+				break;
+		}
+
+}
+
+int base() {
+
+	char batata[30];
+	
+	if (strcmp(batata, "quit") == 0)
+	{
+		exit(1);
+	} else {
+		calculating();
+		base();
+	}
+
+	}
 
 int main(void) {
-
-	char var1;
-	int resul;
-
 	printf("Insira um cálculo:\n");
-	scanf("%s", &var1);
-
-	resul = var1;
-
-	printf("O resultado de sua conta é: %d" , resul);
-
-	return 0;
-
+	base();
 }
