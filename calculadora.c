@@ -54,6 +54,11 @@ int base() {
 	}
 
 int main(void) {
+	system("clear");
+	printf("######################################\n");
+	printf("      Iniciando calculadora Mn22.\n");
+	printf("######################################\n");
+	printf("\nMn22 é uma calculadora simples que com o tempo vai ser aprimorada, para sair digite 'quit'.\n\n");
 	printf("Insira um cálculo:\n");
 	base();
 }
