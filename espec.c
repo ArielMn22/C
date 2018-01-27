@@ -40,24 +40,28 @@ int escolha(char* argv[]) {
 
   parametrum = atoi( argv[1] );
 
-  system("cls || clear");
-
 	switch ( parametrum )
 	{
 		case 1:
+      system("cls || clear");
 			cpu();
 			break;
 		case 2:
+      system("cls || clear");
 			memory();
 			break;
 		case 3:
+      system("cls || clear");
 			hd();
 			break;
 		case 4:
+      system("cls || clear");
 			net();
 			break;
 		default :
+      printf("Parâmetro inválido. Insira um dos parâmetros disponíveis\n\n");
 			help();
+      return 1;
 	}
 
   printf("\nAperte [QUALQUER TECLA] para sair\n");
@@ -68,7 +72,7 @@ int escolha(char* argv[]) {
 
 int main(int argc, char* argv[]) {
 
-  if ( argc <= 1 )
+  if ( argc == 1 )
   {
     printf("Adicione algum parâmetro:\n\n");
     help();
