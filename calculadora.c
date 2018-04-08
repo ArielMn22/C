@@ -17,21 +17,13 @@ float calculating() {
 		scanf("%[^\n]s", user_entry);
 		setbuf(stdin, NULL);
 		
-		//printf("Esse é o valor de 'user_entry': %s\n", user_entry); //checando informações
-
 		sscanf(user_entry, "%f %c %f" , &num1, &op, &num2) || sscanf(user_entry, "%s %c %d", var1, &op, &number) || sscanf(user_entry, "%s", var1);
-    /* A parte acima faz vários scans da váriavel "user_entry", desse modo o usuário pode colocar três tipos de entrada */
+    /* A parte acima faz vários sscanf da váriavel "user_entry", desse modo o usuário pode colocar três tipos de entrada */
 
-    /*pointer*/
+    /*pointer - Ainda hein estudo*/
     char *ponteirodevar;
 
     ponteirodevar = var1;
-
-	//	printf("Esse é o valor de 'num1': %.2f\n", num1); //checando informações
-	//	printf("Esse é o valor de 'op': %c\n", op); //checando informações
-	//	printf("Esse é o valor de 'num2': %.2f\n", num2); //checando informações
-  //  printf("Esse é o valor de 'var1[5]': %s\n", var1); //checando informações
-  //  printf("Esse é o valor de '*ponteirodevar': %s\n", ponteirodevar); //checando informações
 
 		if ( op == '=' ) {
 
@@ -39,9 +31,6 @@ float calculating() {
 			int user_equality;
 
 			sscanf(user_entry, "%s = %d", user_var, &user_equality);
-
-			//printf("valor de user_var: %s\n", user_var);
-			//printf("valor de user_equality: %d\n", user_equality);
 
 		}
 
